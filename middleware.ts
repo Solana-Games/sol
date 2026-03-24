@@ -13,7 +13,9 @@ export function middleware(_request: NextRequest) {
   );
   response.headers.set(
     "Strict-Transport-Security",
-    "max-age=63072000; includeSubDomains; preload"
+    process.env.NODE_ENV === "production"
+      ? "max-age=63072000; includeSubDomains; preload"
+      : "max-age=0"
   );
   response.headers.set("X-DNS-Prefetch-Control", "on");
 

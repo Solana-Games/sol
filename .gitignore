@@ -18,3 +18,4 @@ target/
 .cache/
 coverage/
 .nyc_output/
+tsconfig.tsbuildinfo
