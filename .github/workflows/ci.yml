@@ -28,7 +28,7 @@ jobs:
         run: npm run lint
 
       - name: Typecheck
-        run: npx tsc --noEmit --noUnusedLocals false --noUnusedParameters false
+        run: ./node_modules/.bin/tsc --noEmit --noUnusedLocals false --noUnusedParameters false
 
       - name: Build
         run: npm run build

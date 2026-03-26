@@ -36,6 +36,11 @@ const envSchema = z.object({
   NEXT_PUBLIC_MIN_BET_SOL: z.string().optional().default("0.01"),
   NEXT_PUBLIC_MAX_BET_SOL: z.string().optional().default("10"),
   NEXT_PUBLIC_HOUSE_EDGE_BPS: z.string().optional().default("200"),
+
+  // Optional integrations
+  NEXT_PUBLIC_RPC_WSS_ENDPOINT: z.string().url().optional(),
+  NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: z.string().optional(),
+  NEXT_PUBLIC_SENTRY_DSN: z.string().url().optional(),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);
