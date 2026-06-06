@@ -1,4 +1,5 @@
 import './globals.css'
+import '@/lib/env'
 import type { Metadata } from 'next'
 import { WalletProvider } from '@/components/WalletProvider'
 
